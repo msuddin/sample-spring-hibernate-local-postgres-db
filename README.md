@@ -30,19 +30,34 @@ Now let's run the jar:
 ```
 ava -jar build/libs/<jar_name>.jar
 ```
-The application should now start-up. Access all data be curling below:
+The application should now start-up.
+
+## API Endpoints
+### /hi
+You can make a curl below that does not connect to any db and just prints a string:
 ```
-curl http://localhost:8080/all
+curl http://localhost:8080/hi
 ```
-The curl above should give you the following output:
+Output should be:
 ```
-["Batman","Superman","Wonder Women"]
+application says hi
 ```
-You can also try the following curl to get just one of the above:
+### /hi{id}
+You can curl to get just one of the records:
 ```
 curl http://localhost:8080/hi/1
 ```
 Output should be:
 ```
-Hi Batman
+Hi batman
 ```
+### /all
+You can curl to get all data:
+```
+curl http://localhost:8080/all
+```
+The curl above should give you the following output:
+```
+["batman","superman","wonder women"]
+```
+

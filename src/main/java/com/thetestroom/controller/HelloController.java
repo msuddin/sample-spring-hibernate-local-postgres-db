@@ -18,6 +18,12 @@ public class HelloController {
     private AccountService accountService;
 
     // This is an api endpoint
+    @RequestMapping("/hi")
+    // This is a test mapping to ensure the API is up and running
+    public String getTestString() {
+        return "application says hi";
+    }
+
     @RequestMapping("/hi/{id}")
     // Takes a long ID and returns an entity name
     public String hi(@PathVariable("id") Long index) {

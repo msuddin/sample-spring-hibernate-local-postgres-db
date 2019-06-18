@@ -28,6 +28,6 @@ public class HelloControllerTest {
                         "http://localhost:" + port + "/all",
                         String.class
                 ),
-                is("[\"Batman\",\"Superman\",\"Wonder Women\"]"));
+                is("[\"batman\",\"superman\",\"wonder women\"]"));
     }
 }
