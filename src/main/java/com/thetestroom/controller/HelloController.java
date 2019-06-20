@@ -1,42 +1,28 @@
 package com.thetestroom.controller;
 
-import com.thetestroom.models.Account;
 import com.thetestroom.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.logging.Logger;
 
+// Annotation below used to allow cross origin requests
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class HelloController {
+
+    static Logger log = Logger.getLogger(HelloController.class.getName());
 
     @Autowired
     // The controller provides a service
     private AccountService accountService;
 
-    // This is an api endpoint
-    @RequestMapping("/hi")
-    // This is a test mapping to ensure the API is up and running
-    public String getTestString() {
-        return "application says hi";
-    }
-
-    @RequestMapping("/hi/{id}")
+    @RequestMapping(value = "/hi/{id}", method = RequestMethod.GET, produces = "application/json")
     // Takes a long ID and returns an entity name
     public String hi(@PathVariable("id") Long index) {
-        return "Hi " + accountService.get(index).getName();
+        log.info("Called /hi/" + index);
+        log.info("Returning = {\"message\":\"hi " + accountService.get(index).getName() + "\"}");
+        return "{\"message\":\"hi " + accountService.get(index).getName() + "\"}";
     }
 
-    @RequestMapping("/all")
-    // Will get all names and return as a List of Strings
-    public List<String> hey() {
-        List<String> everyOne = new ArrayList<>();
-        for (Account account : accountService.list()) {
-            everyOne.add(account.getName());
-        }
-        return everyOne;
-    }
 }

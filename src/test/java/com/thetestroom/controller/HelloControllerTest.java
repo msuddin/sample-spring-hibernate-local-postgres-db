@@ -22,12 +22,12 @@ public class HelloControllerTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void shouldGetAllSuperHeroDataFromAllApi() {
+    public void shouldGetSuperHeroDataFromBasedOnId() {
         Assert.assertThat(
                 this.restTemplate.getForObject(
-                        "http://localhost:" + port + "/all",
+                        "http://localhost:" + port + "/hi/1",
                         String.class
                 ),
-                is("[\"batman\",\"superman\",\"wonder women\"]"));
+                is("{\"message\":\"hi batman\"}"));
     }
 }

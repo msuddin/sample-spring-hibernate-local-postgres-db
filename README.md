@@ -13,6 +13,8 @@ What is the purpose of this project?
 * The AccountService class uses the Account class as an Entity class
 * The Account (an Entity class) matches each of it's member variables to a table, table must be named the same as the class
 * The AccountRepository (a Repository interface) extends the JpaRepository interface and provides default CRUD operations
+* The controllers need to allow cross origin requests in order to make calls to the API's
+* Added a Logger to the Home Controller
 
 #### Test
 * Under main/resources, the application.properties allows h2 logging to console
