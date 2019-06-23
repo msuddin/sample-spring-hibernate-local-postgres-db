@@ -13,7 +13,7 @@ import static org.hamcrest.Matchers.is;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class HelloControllerTest {
+public class AccountControllerTest {
 
     @LocalServerPort
     private int port;
