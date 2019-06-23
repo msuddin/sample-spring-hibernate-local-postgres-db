@@ -23,6 +23,10 @@ What is the purpose of this project?
 * The controller test uses TestRestTemplate to perform a get and assert on the content to the URL
 * The Service test checks to see that the data is present after hibernate runs the import.sql under main/java/resource
 
+## Dependencies
+* This project assumes that postgresql://localhost:5432/db is available
+* This project assumes that the docker container found at https://github.com/msuddin/sample-postgress-docker is running locally
+
 ## Instructions
 From the root directory of the project, run the command below to run the tests and build the jar:
 ```
