@@ -9,9 +9,9 @@ import java.util.logging.Logger;
 // Annotation below used to allow cross origin requests
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-public class HelloController {
+public class AccountController {
 
-    static Logger log = Logger.getLogger(HelloController.class.getName());
+    static Logger log = Logger.getLogger(AccountController.class.getName());
 
     @Autowired
     // The controller provides a service
