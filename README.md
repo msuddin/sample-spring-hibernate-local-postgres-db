@@ -53,13 +53,3 @@ Output should be:
 ```
 Hi batman
 ```
-### /all
-You can curl to get all data:
-```
-curl http://localhost:8080/all
-```
-The curl above should give you the following output:
-```
-["batman","superman","wonder women"]
-```
-
