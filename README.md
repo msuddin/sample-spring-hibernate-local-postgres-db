@@ -48,7 +48,7 @@ Output should be:
 ```
 application says hi
 ```
-### /hi{id}
+### /hi/{id}
 You can curl to get just one of the records:
 ```
 curl http://localhost:8080/hi/1
