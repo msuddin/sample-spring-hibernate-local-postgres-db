@@ -1,4 +1,4 @@
-# sample-spring-hibernate
+# sample-spring-hibernate-local-postgres-db
 
 ## Purpose
 
